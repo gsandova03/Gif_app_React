@@ -5,8 +5,6 @@ export default function Gif({title, url, id}){
         <div className="gift">
             <h4>{title}</h4>
             <img src={url} />
-            <br/>
-            <small>{id}</small>
         </div>
     )
 }
