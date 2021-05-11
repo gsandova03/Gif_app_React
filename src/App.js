@@ -1,34 +1,28 @@
-import React, {useState} from 'react';
-import './App.css';
-import ListOfGif from './components/ListOfGifs';
+import React from "react";
+import "./App.css";
+import Home from "../src/pages/Home";
+import Results from "../src/pages/SearchResult";
+import Detail from "../src/pages/Detail";
 
-import { Route, Link} from 'wouter';
+import { Route, Link } from "wouter";
 
 function App() {
-
-  const [keyword, updateKeyword] = useState('panda')
-
   return (
-    <div className="App">
-      <section className="App-content">
-         {/* <button onClick={() => updateKeyword('anime')}>Cambiar keyword</button> */}
-         {/* <ListOfGif keyword={keyword}/> */}
-         <div className="header">
+    <div className="Page">
+      <section className="content">
+        <Link to="/">
           <h1>Mi App de Gifs</h1>
-          <ul className="links">
-            <li><Link to='/gif/spiderman'>Gif de SpiderMan</Link></li>
-            <li><Link to='/gif/colombia'>Gif de Colombia</Link></li>
-            <li><Link to='/gif/morty'>Gif de Morty</Link></li>
-            <li><Link to='/gif/matrix'>Gif de Matrix</Link></li>
-          </ul>
-         </div>
-         <div className="container_gifs">
+        </Link>
+        <Route component={Home} path="/" />
+        <Route component={Results} path="/search/:keyword" />
+        <Route component={Detail} path="/gif/:id" />
+
+        {/* <div className="container_gifs">
           <Route 
-            component={ListOfGif}
+            component={Results}
             path="/gif/:keyword"
           />
-         </div>
-
+         </div> */}
       </section>
     </div>
   );
