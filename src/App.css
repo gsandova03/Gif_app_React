@@ -1,5 +1,5 @@
 .Page {
-  background-color: #282c34;
+  background-color: #121212;
   text-align: center;
   min-height: 100vh;
   display: flex;
@@ -7,4 +7,24 @@
   align-items: center;
   font-size: 1.5rem;
   color: white;
+}
+
+.icon_title {
+  cursor: pointer;
+  width: auto;
+  height: 70px;
+  margin: 30px;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(180, 180, 180);
+  border-radius: 2px;
 }

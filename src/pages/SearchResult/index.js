@@ -1,19 +1,22 @@
 import React, { useEffect, useState } from "react";
 import ListOfGifs from "../../components/ListOfGifs";
 import getGifs from "../../services/getGifs";
+import { useGifs } from "../../Hooks/useGifs";
 
 export default function SearchResult({ params }) {
   const { keyword } = params;
-  const [gifs, setGifs] = useState([]);
+  const { gifs } = useGifs({ keyword });
 
-  useEffect(
-    function () {
-      getGifs({ keyword }).then((gifs) => {
-        setGifs(gifs);
-      });
-    },
-    [keyword]
-  );
+  // const [gifs, setGifs] = useState([]);
+
+  // useEffect(
+  //   function () {
+  //     getGifs({ keyword }).then((gifs) => {
+  //       setGifs(gifs);
+  //     });
+  //   },
+  //   [keyword]
+  // );
 
   return (
     <>

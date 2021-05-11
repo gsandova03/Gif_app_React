@@ -8,7 +8,7 @@ h3 {
 
 .search_links li {
   display: inline-block;
-  background: #2b356e;
+  background: #72d0e0;
   text-decoration: none;
   padding: 0.3em 1em;
   margin: 0.5em;
@@ -18,4 +18,19 @@ h3 {
 .items {
   text-decoration: none;
   color: white;
+}
+
+.search_form input {
+  border: none;
+  background: white;
+  width: 50%;
+  height: 30px;
+  text-align: center;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.search_form input:focus {
+  outline: none;
+  border: 3px solid #72d0e0;
 }

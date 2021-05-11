@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "../src/pages/Home";
 import Results from "../src/pages/SearchResult";
 import Detail from "../src/pages/Detail";
+import gifLogo from "../src/icons/Gifs Application.svg";
 
 import { Route, Link } from "wouter";
 
@@ -11,7 +12,7 @@ function App() {
     <div className="Page">
       <section className="content">
         <Link to="/">
-          <h1>Mi App de Gifs</h1>
+          <img className="icon_title" src={gifLogo}></img>
         </Link>
         <Route component={Home} path="/" />
         <Route component={Results} path="/search/:keyword" />
