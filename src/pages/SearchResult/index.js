@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ListOfGifs from "../../components/ListOfGifs";
-import getGifs from "../../services/getGifs";
 import { useGifs } from "../../Hooks/useGifs";
 
 export default function SearchResult({ params }) {
