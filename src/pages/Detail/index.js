@@ -1,6 +1,6 @@
 import React from "react";
-import Gif from "../../components/Gif/Gif";
-import useGlobalGifs from "../../Hooks/useGlobalGif";
+import Gif from "components/Gif/Gif";
+import useGlobalGifs from "Hooks/useGlobalGif";
 
 export default function Detail({ params }) {
   const gifs = useGlobalGifs();

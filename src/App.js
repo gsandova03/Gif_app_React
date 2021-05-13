@@ -4,7 +4,7 @@ import Home from "../src/pages/Home";
 import Results from "../src/pages/SearchResult";
 import Detail from "../src/pages/Detail";
 import gifLogo from "../src/icons/Gifs Application.svg";
-import Context from "./context/Context";
+import Context from "context/Context";
 import { GifsContextProvaider } from "./context/GifsContext";
 
 import { Route, Link } from "wouter";

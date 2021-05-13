@@ -1,10 +1,10 @@
 import React, { Fragment, useState } from "react";
-import { Link, useLocation } from "wouter";
+import { useLocation } from "wouter";
 import "./styles.css";
-import { useGifs } from "../../Hooks/useGifs";
-import ListOfGifs from "../../components/ListOfGifs";
-
-const GIFS_POPULARES = ["Colombia", "Matrix", "Chile", "Panda", "Programing"];
+import { useGifs } from "Hooks/useGifs";
+import ListOfGifs from "components/ListOfGifs";
+import Category from "components/Category";
+import TrendingSearch from "components/TrendingSearch";
 
 export default function Home() {
   const [keyword, setKeyword] = useState([]);
@@ -30,17 +30,26 @@ export default function Home() {
           value={keyword}
         />
       </form>
-      <ul className="search_links">
-        {GIFS_POPULARES.map((populargifs) => (
-          <li key={populargifs}>
-            <Link className="items" to={`/search/${populargifs}`}>
-              Gif de {populargifs}
-            </Link>
-          </li>
-        ))}
-      </ul>
-      <h3>Ultimos Gifs..</h3>
-      <ListOfGifs gifs={gifs} />
+      <div className="Content">
+        <div className="history_gif">
+          <h3>Ultimos Gifs..</h3>
+          <ListOfGifs gifs={gifs} />
+        </div>
+        <div className="Tags">
+          <Category
+            name="Gifs Populares"
+            options={[
+              "Colombia",
+              "Matrix",
+              "Chile",
+              "Panda",
+              "Programing",
+              "Pepa pig",
+            ]}
+          />
+          <TrendingSearch />
+        </div>
+      </div>
     </Fragment>
   );
 }
